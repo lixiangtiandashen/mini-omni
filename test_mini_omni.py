@@ -1,47 +1,14 @@
-import os
-import torch
-import torchaudio
-import whisper
-from tqdm import tqdm
-import logging
-from jiwer import wer, cer, Compose, ToLowerCase, RemovePunctuation
-from nltk.translate.bleu_score import corpus_bleu, SmoothingFunction
-import lightning as L
+from test_utils import *
 from snac import SNAC
 from litgpt import Tokenizer
 from litgpt.model import GPT, Config
 from lightning.fabric.utilities.load import _lazy_load as lazy_load
 from utils.snac_utils import layershift, reconscruct_snac, reconstruct_tensors
 from huggingface_hub import snapshot_download
-import re
-import time
-
-# 导入必要的函数和类
-from test_whisper import (
-    BaseDataset,
-    LibriSpeechDataset,
-    FleursDataset,
-    CustomDataset,
-    device,
-)
-
-# 定义日志文件路径
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-log_file = os.path.join(BASE_DIR, "tests", "mini_omni_test_log.txt")
-
-# 确保日志文件所在目录存在
-os.makedirs(os.path.dirname(log_file), exist_ok=True)
+import lightning as L
 
 # 配置日志
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler(log_file, mode="w"),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
+logger = configure_logger(__name__, os.path.join(BASE_DIR, "tests", "mini_omni_test_log.txt"))
 
 # 定义常量
 _eot = 151936
@@ -55,7 +22,6 @@ _pad_a = 4097
 _input_a = 4098
 _answer_a = 4099
 _split = 4100
-
 
 def load_model(ckpt_dir, device):
     snacmodel = SNAC.from_pretrained("hubertsiuzdak/snac_24khz").eval().to(device)
@@ -75,26 +41,16 @@ def load_model(ckpt_dir, device):
 
     return fabric, model, text_tokenizer, snacmodel, whispermodel
 
-
 def download_model(ckpt_dir):
     repo_id = "gpt-omni/mini-omni"
     snapshot_download(repo_id, local_dir=ckpt_dir, revision="main")
-
 
 def preprocess_audio(audio, whispermodel, device):
     audio = whisper.pad_or_trim(audio)
     mel = whisper.log_mel_spectrogram(audio).to(device)
     return mel, mel.shape[-1]
 
-
-def get_input_ids_whisper(
-    mel,
-    leng,
-    whispermodel,
-    device,
-    special_token_a=_answer_a,
-    special_token_t=_answer_t,
-):
+def get_input_ids_whisper(mel, leng, whispermodel, device, special_token_a=_answer_a, special_token_t=_answer_t):
     with torch.no_grad():
         mel = mel.unsqueeze(0).to(device)
         audio_feature = whispermodel.embed_audio(mel)[0][:leng]
@@ -110,7 +66,6 @@ def get_input_ids_whisper(
     input_id_T = torch.tensor([_input_t] + [_pad_t] * T + [_eot, special_token_t])
     input_ids.append(input_id_T.unsqueeze(0))
     return audio_feature.unsqueeze(0), input_ids
-
 
 def A1_T1(fabric, audio_feature, input_ids, leng, model, text_tokenizer, step):
     from inference import generate_ASR
@@ -136,49 +91,7 @@ def A1_T1(fabric, audio_feature, input_ids, leng, model, text_tokenizer, step):
     model.clear_kv_cache()
     return text_tokenizer.decode(torch.tensor(tokenlist)).strip()
 
-
-def preprocess_text(text, case_sensitive=False, keep_punctuation=False):
-    if not case_sensitive:
-        text = text.lower()
-    if not keep_punctuation:
-        text = re.sub(r"[^\w\s]", "", text)
-    return text
-
-
-def calculate_bleu(
-    references, hypotheses, case_sensitive=False, keep_punctuation=False
-):
-    transform = []
-    if not case_sensitive:
-        transform.append(ToLowerCase())
-    if not keep_punctuation:
-        transform.append(RemovePunctuation())
-    transform = Compose(transform) if transform else lambda x: x
-
-    processed_refs = [
-        [transform(ref).split()]
-        for ref in references
-    ]
-    processed_hyps = [
-        transform(hyp).split()
-        for hyp in hypotheses
-    ]
-    return corpus_bleu(
-        processed_refs, processed_hyps, smoothing_function=SmoothingFunction().method1
-    )
-
-
-def evaluate_omni_model(
-    model,
-    dataset,
-    fabric,
-    text_tokenizer,
-    snacmodel,
-    whispermodel,
-    device,
-    case_sensitive=False,
-    keep_punctuation=False,
-):
+def evaluate_omni_model(model, dataset, fabric, text_tokenizer, snacmodel, whispermodel, device, case_sensitive=False, keep_punctuation=False):
     hypotheses, references = [], []
     start_time = time.time()
     total_samples = len(dataset)
@@ -253,7 +166,6 @@ def evaluate_omni_model(
 
     return wer_score, cer_score, bleu
 
-
 def run_omni_tests(datasets, case_sensitive=False, keep_punctuation=False):
     results = {}
 
@@ -287,31 +199,6 @@ def run_omni_tests(datasets, case_sensitive=False, keep_punctuation=False):
 
     return results
 
-
-def summarize_results(results):
-    logger.info("=============== MINI-OMNI TEST SUMMARY ===============")
-    total_wer, total_cer, total_bleu = 0, 0, 0
-    total_tests = len(results)
-    
-    for dataset_name, metrics in results.items():
-        logger.info(f"\nResults for {dataset_name}:")
-        wer = metrics['WER']
-        cer = metrics['CER']
-        bleu = metrics['BLEU']
-        total_wer += wer
-        total_cer += cer
-        total_bleu += bleu
-        
-        logger.info(f"WER: {wer * 100:.2f}%")
-        logger.info(f"CER: {cer * 100:.2f}%")
-        logger.info(f"BLEU: {bleu:.4f}")
-    
-    logger.info("\nOverall Average Results:")
-    logger.info(f"Average WER: {(total_wer / total_tests) * 100:.2f}%")
-    logger.info(f"Average CER: {(total_cer / total_tests) * 100:.2f}%")
-    logger.info(f"Average BLEU: {total_bleu / total_tests:.4f}")
-    logger.info("======================================================")
-
 if __name__ == "__main__":
     datasets = {
         "LibriSpeech": LibriSpeechDataset(split="test-clean", subsample_rate=50),
@@ -319,9 +206,7 @@ if __name__ == "__main__":
         "Custom": CustomDataset("./data/samples"),
     }
 
-    omni_results = run_omni_tests(
-        datasets, case_sensitive=False, keep_punctuation=False
-    )
+    omni_results = run_omni_tests(datasets, case_sensitive=False, keep_punctuation=False)
     
     # 添加总结
-    summarize_results(omni_results)
+    summarize_results(omni_results, logger)
