@@ -6,6 +6,7 @@ from lightning.fabric.utilities.load import _lazy_load as lazy_load
 from utils.snac_utils import layershift, reconscruct_snac, reconstruct_tensors
 from huggingface_hub import snapshot_download
 import lightning as L
+from litgpt.generate.base import generate_ASR
 
 # 配置日志
 logger = configure_logger(__name__, os.path.join(BASE_DIR, "tests", "mini_omni_test_log.txt"))
@@ -68,7 +69,6 @@ def get_input_ids_whisper(mel, leng, whispermodel, device, special_token_a=_answ
     return audio_feature.unsqueeze(0), input_ids
 
 def A1_T1(fabric, audio_feature, input_ids, leng, model, text_tokenizer, step):
-    from inference import generate_ASR
 
     with fabric.init_tensor():
         model.set_kv_cache(batch_size=1)
@@ -97,6 +97,17 @@ def evaluate_omni_model(model, dataset, fabric, text_tokenizer, snacmodel, whisp
     total_samples = len(dataset)
     processed_samples = 0
 
+    # 添加一个阈值来判断高错误率
+    high_error_threshold = 0.2  # 可以根据需要调整这个阈值
+
+    # 创建预处理转换
+    transform = []
+    if not case_sensitive:
+        transform.append(ToLowerCase())
+    if not keep_punctuation:
+        transform.append(RemovePunctuation())
+    transform = Compose(transform) if transform else lambda x: x
+
     for i, (audio, text) in enumerate(
         tqdm(dataset, desc=f"{type(dataset).__name__} Evaluation")
     ):
@@ -121,11 +132,28 @@ def evaluate_omni_model(model, dataset, fabric, text_tokenizer, snacmodel, whisp
                 step=i,
             )
 
+            # 对单个样本进行预处理
+            transformed_reference = transform(text)
+            transformed_hypothesis = transform(output)
+
+            # 计算单个样本的WER
+            sample_wer = wer([transformed_reference], [transformed_hypothesis])
+            
+            # 如果单个样本的WER超过阈值，打印详细信息
+            if sample_wer > high_error_threshold:
+                logger.warning(f"High error rate detected for sample {i+1}:")
+                logger.warning(f"Original Reference: {text}")
+                logger.warning(f"Original Hypothesis: {output}")
+                logger.warning(f"Transformed Reference: {transformed_reference}")
+                logger.warning(f"Transformed Hypothesis: {transformed_hypothesis}")
+                logger.warning(f"Sample WER: {sample_wer:.2f}")
+                logger.warning("---")
+
             hypotheses.append(output)
             references.append(text)
             processed_samples += 1
 
-            if i < 5:  # 只打印前5个样本
+            if i < 2:  # 只打印前2个样本
                 logger.info(f"Sample {i+1}:")
                 logger.info(f"Reference: {text}")
                 logger.info(f"Hypothesis: {output}")
@@ -138,13 +166,6 @@ def evaluate_omni_model(model, dataset, fabric, text_tokenizer, snacmodel, whisp
     total_time = end_time - start_time
 
     # 手动进行预处理
-    transform = []
-    if not case_sensitive:
-        transform.append(ToLowerCase())
-    if not keep_punctuation:
-        transform.append(RemovePunctuation())
-    transform = Compose(transform) if transform else lambda x: x
-
     transformed_references = [transform(ref) for ref in references]
     transformed_hypotheses = [transform(hyp) for hyp in hypotheses]
 

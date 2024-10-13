@@ -424,6 +424,17 @@ def evaluate_model(
     total_samples = len(dataset)
     processed_samples = 0
     
+    # 添加一个阈值来判断高错误率
+    high_error_threshold = 0.2  # 可以根据需要调整这个阈值
+    
+    # 创建预处理转换
+    transform = []
+    if not case_sensitive:
+        transform.append(ToLowerCase())
+    if not keep_punctuation:
+        transform.append(RemovePunctuation())
+    transform = Compose(transform) if transform else lambda x: x
+    
     for i, (audio, text) in enumerate(
         tqdm(dataset, desc=f"{type(dataset).__name__} {task.capitalize()}")
     ):
@@ -433,11 +444,28 @@ def evaluate_model(
             hypothesis = result["text"]
             reference = text
 
+            # 对单个样本进行预处理
+            transformed_reference = transform(reference)
+            transformed_hypothesis = transform(hypothesis)
+
+            # 计算单个样本的WER
+            sample_wer = wer([transformed_reference], [transformed_hypothesis])
+            
+            # 如果单个样本的WER超过阈值，打印详细信息
+            if sample_wer > high_error_threshold:
+                logger.warning(f"High error rate detected for sample {i+1}:")
+                logger.warning(f"Original Reference: {reference}")
+                logger.warning(f"Original Hypothesis: {hypothesis}")
+                logger.warning(f"Transformed Reference: {transformed_reference}")
+                logger.warning(f"Transformed Hypothesis: {transformed_hypothesis}")
+                logger.warning(f"Sample WER: {sample_wer:.2f}")
+                logger.warning("---")
+
             hypotheses.append(hypothesis)
             references.append(reference)
             processed_samples += 1
 
-            if i < 5:  # 只处理前5个样本的时间戳
+            if i < 2:  # 只处理前2个样本的时间戳
                 logger.info(f"Sample {i+1} - Reference: {reference}")
                 logger.info(f"Sample {i+1} - Hypothesis: {hypothesis}")
                 process_timestamps(
@@ -459,13 +487,6 @@ def evaluate_model(
     total_time = end_time - start_time
 
     # 手动进行预处理
-    transform = []
-    if not case_sensitive:
-        transform.append(ToLowerCase())
-    if not keep_punctuation:
-        transform.append(RemovePunctuation())
-    transform = Compose(transform) if transform else lambda x: x
-
     transformed_references = [transform(ref) for ref in references]
     transformed_hypotheses = [transform(hyp) for hyp in hypotheses]
 
