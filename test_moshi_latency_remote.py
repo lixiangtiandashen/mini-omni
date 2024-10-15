@@ -19,6 +19,8 @@ async def run_benchmark(uri, steps):
 
         main_audio = []
         main_text = []
+        token_times = []  # 新增:用于存储每个token的生成时间
+        input_processing_time = 0  # 新增:用于记录输入处理时间
 
         send_complete = asyncio.Event()
 
@@ -35,9 +37,12 @@ async def run_benchmark(uri, steps):
             await websocket.send(b"\x03")  # 发送结束信号
 
         async def receive_response():
+            nonlocal input_processing_time
+            last_token_time = time.time()  # 新增:记录上一个token的时间
             while True:
                 try:
                     response = await asyncio.wait_for(websocket.recv(), timeout=1.0)
+                    current_time = time.time()
                     kind = response[0]
                     payload = response[1:]
 
@@ -50,6 +55,15 @@ async def run_benchmark(uri, steps):
                         text = payload.decode("utf-8")
                         main_text.append(text)
                         print(f"Received text: {text}")
+                        
+                        # 新增:计算并记录token生成时间
+                        token_time = current_time - last_token_time
+                        token_times.append(token_time)
+                        last_token_time = current_time
+                        
+                        if len(main_text) == 1:
+                            # 新增:记录第一个token的时间作为输入处理时间
+                            input_processing_time = current_time - start_time
                     elif kind == 3:  # 结束信号
                         break
                 except asyncio.TimeoutError:
@@ -63,8 +77,19 @@ async def run_benchmark(uri, steps):
         end_time = time.time()
 
         total_time = end_time - start_time
+        total_tokens = len(main_text)
+        
         print(f"Total time: {total_time:.2f} seconds")
-        print(f"Average time per step: {total_time / steps * 1000:.2f} ms")
+        print(f"Input processing time: {input_processing_time:.2f} seconds")
+        print(f"Total tokens generated: {total_tokens}")
+        
+        if token_times:
+            avg_token_time = sum(token_times) / len(token_times)
+            print(f"Average token generation time: {avg_token_time:.4f} seconds")
+            print(f"Min token generation time: {min(token_times):.4f} seconds")
+            print(f"Max token generation time: {max(token_times):.4f} seconds")
+            print(f"Tokens per second: {total_tokens / total_time:.2f}")
+        
         print("Generated text:")
         print("".join(main_text))
 
