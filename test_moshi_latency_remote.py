@@ -82,11 +82,12 @@ async def run_benchmark(uri, steps):
         print(f"Total tokens generated: {total_tokens}")
         
         if token_times:
+            # 计算token速率应当除去input_processing_time
             avg_token_time = sum(token_times) / len(token_times)
             print(f"Average token generation time: {avg_token_time:.4f} seconds")
             print(f"Min token generation time: {min(token_times):.4f} seconds")
             print(f"Max token generation time: {max(token_times):.4f} seconds")
-            print(f"Tokens per second: {total_tokens / total_time:.2f}")
+            print(f"Tokens per second: {1 / avg_token_time:.2f}")
         
         print("Generated text:")
         print("".join(main_text))
