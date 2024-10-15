@@ -37,6 +37,7 @@ async def run_benchmark(uri, audio_file):
     total_tokens = 0
     token_times = []
     last_token_time = start_time
+    first_token_time = None
 
     for chunk in response.iter_content(chunk_size=None):
         if chunk:
@@ -45,23 +46,30 @@ async def run_benchmark(uri, audio_file):
 
             # 每个音频chunk对应stream_stride个token
             total_tokens += data["stream_stride"]
-            token_time = current_time - last_token_time
-            token_times.append(token_time)
-            last_token_time = current_time
+            
+            if first_token_time is None:
+                first_token_time = current_time
+                last_token_time = current_time
+            else:
+                token_time = current_time - last_token_time
+                token_times.append(token_time)
+                last_token_time = current_time
 
     end_time = time.time()
     total_time = end_time - start_time
+    generation_time = end_time - first_token_time
 
-    print(f"Total time: {total_time:.2f} seconds")
-    print(f"Total audio chunks received: {total_audio_chunks}")
-    print(f"Total tokens generated: {total_tokens}")
+    print(f"总运行时间: {total_time:.2f} 秒")
+    print(f"首token延迟: {first_token_time - start_time:.2f} 秒")
+    print(f"总音频块数: {total_audio_chunks}")
+    print(f"总生成token数: {total_tokens}")
 
     if token_times:
         avg_token_time = sum(token_times) / len(token_times)
-        print(f"Average token generation time: {avg_token_time:.4f} seconds")
-        print(f"Min token generation time: {min(token_times):.4f} seconds")
-        print(f"Max token generation time: {max(token_times):.4f} seconds")
-        print(f"Tokens per second: {total_tokens / total_time:.2f}")
+        print(f"中间每token延迟: {avg_token_time:.4f} 秒")
+        print(f"最小token延迟: {min(token_times):.4f} 秒")
+        print(f"最大token延迟: {max(token_times):.4f} 秒")
+        print(f"吞吐量: {(total_tokens - data['stream_stride']) / generation_time:.2f} tokens/秒")
 
 
 def main():

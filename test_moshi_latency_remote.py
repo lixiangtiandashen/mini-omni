@@ -37,7 +37,8 @@ async def run_benchmark(uri, steps):
 
         async def receive_response():
             nonlocal input_processing_time
-            last_token_time = time.time()  # 新增:记录上一个token的时间
+            first_token_time = None
+            last_token_time = None
             while True:
                 try:
                     response = await asyncio.wait_for(websocket.recv(), timeout=1.0)
@@ -53,16 +54,16 @@ async def run_benchmark(uri, steps):
                     elif kind == 2:  # 文本
                         text = payload.decode("utf-8")
                         main_text.append(text)
-                        print(f"Received text: {text}")
+                        print(f"接收到文本: {text}")
                         
-                        # 新增:计算并记录token生成时间
-                        token_time = current_time - last_token_time
-                        token_times.append(token_time)
+                        if first_token_time is None:
+                            first_token_time = current_time
+                            input_processing_time = first_token_time - start_time
+                        else:
+                            token_time = current_time - last_token_time
+                            token_times.append(token_time)
+                        
                         last_token_time = current_time
-                        
-                        if len(main_text) == 1:
-                            # 新增:记录第一个token的时间作为输入处理时间
-                            input_processing_time = current_time - start_time
 
                 except asyncio.TimeoutError:
                     if send_complete.is_set():
@@ -77,19 +78,19 @@ async def run_benchmark(uri, steps):
         total_time = end_time - start_time
         total_tokens = len(main_text)
         
-        print(f"Total time: {total_time:.2f} seconds")
-        print(f"Input processing time: {input_processing_time:.2f} seconds")
-        print(f"Total tokens generated: {total_tokens}")
+        print(f"总运行时间: {total_time:.2f} 秒")
+        print(f"首token延迟: {input_processing_time:.2f} 秒")
+        print(f"总生成token数: {total_tokens}")
         
         if token_times:
-            # 计算token速率应当除去input_processing_time
+            generation_time = end_time - (start_time + input_processing_time)
             avg_token_time = sum(token_times) / len(token_times)
-            print(f"Average token generation time: {avg_token_time:.4f} seconds")
-            print(f"Min token generation time: {min(token_times):.4f} seconds")
-            print(f"Max token generation time: {max(token_times):.4f} seconds")
-            print(f"Tokens per second: {1 / avg_token_time:.2f}")
+            print(f"中间每token延迟: {avg_token_time:.4f} 秒")
+            print(f"最小token延迟: {min(token_times):.4f} 秒")
+            print(f"最大token延迟: {max(token_times):.4f} 秒")
+            print(f"吞吐量: {(total_tokens - 1) / generation_time:.2f} tokens/秒")
         
-        print("Generated text:")
+        print("生成的文本:")
         print("".join(main_text))
 
         # 保存生成的音频
