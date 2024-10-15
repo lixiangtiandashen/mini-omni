@@ -2,7 +2,7 @@ from test_utils import *
 from whisper.model import disable_sdpa
 
 # 配置日志
-logger = configure_logger(__name__, os.path.join(BASE_DIR, "tests", "whisper_test_log.txt"))
+logger = configure_logger(__name__, os.path.join(BASE_DIR, "tests", "whisper_asr_test_log.txt"))
 
 # 定义要测试的模型列表
 TEST_MODELS = ["tiny", "base", "small", "medium", "large", "large-v2", "turbo"]

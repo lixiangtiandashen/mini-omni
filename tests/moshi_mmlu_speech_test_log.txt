@@ -1,0 +1,39 @@
+2024-10-15 20:57:12,840 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_macroeconomics
+2024-10-15 20:57:12,841 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/human_aging
+2024-10-15 20:57:12,841 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_microeconomics
+2024-10-15 20:57:12,841 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_physics
+2024-10-15 20:57:12,842 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_computer_science
+2024-10-15 20:57:12,842 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/computer_security
+2024-10-15 20:57:12,842 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_mathematics
+2024-10-15 20:57:12,842 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_us_history
+2024-10-15 20:57:12,842 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_government_and_politics
+2024-10-15 20:57:12,843 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/abstract_algebra
+2024-10-15 20:57:12,843 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/clinical_knowledge
+2024-10-15 20:57:12,843 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_mathematics
+2024-10-15 20:57:12,844 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/business_ethics
+2024-10-15 20:57:12,844 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/anatomy
+2024-10-15 20:57:12,844 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/electrical_engineering
+2024-10-15 20:57:12,844 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/elementary_mathematics
+2024-10-15 20:57:12,844 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_european_history
+2024-10-15 20:57:12,845 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/human_sexuality
+2024-10-15 20:57:12,845 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/formal_logic
+2024-10-15 20:57:12,845 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_biology
+2024-10-15 20:57:12,845 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_physics
+2024-10-15 20:57:12,846 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/global_facts
+2024-10-15 20:57:12,846 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_biology
+2024-10-15 20:57:12,846 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_psychology
+2024-10-15 20:57:12,846 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_geography
+2024-10-15 20:57:12,846 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_world_history
+2024-10-15 20:57:12,847 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_statistics
+2024-10-15 20:57:12,847 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/econometrics
+2024-10-15 20:57:12,847 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_computer_science
+2024-10-15 20:57:12,847 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_chemistry
+2024-10-15 20:57:12,847 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/astronomy
+2024-10-15 20:57:12,848 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_medicine
+2024-10-15 20:57:12,848 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_chemistry
+2024-10-15 20:57:12,848 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/conceptual_physics
+2024-10-15 20:57:12,850 - INFO - Processing subject: high_school_macroeconomics
+2024-10-15 20:58:28,948 - INFO - Processing subject: human_aging
+2024-10-15 21:00:15,720 - INFO - Processing subject: high_school_microeconomics
+2024-10-15 21:01:38,068 - INFO - Processing subject: high_school_physics
+2024-10-15 21:03:30,198 - INFO - Processing subject: high_school_computer_science

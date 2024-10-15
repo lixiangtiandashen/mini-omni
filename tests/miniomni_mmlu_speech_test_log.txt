@@ -1,0 +1,308 @@
+2024-10-15 17:56:43,284 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_macroeconomics
+2024-10-15 17:56:43,285 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/human_aging
+2024-10-15 17:56:43,294 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_microeconomics
+2024-10-15 17:56:43,294 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_physics
+2024-10-15 17:56:43,294 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_computer_science
+2024-10-15 17:56:43,294 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/computer_security
+2024-10-15 17:56:43,295 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_mathematics
+2024-10-15 17:56:43,295 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_us_history
+2024-10-15 17:56:43,295 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_government_and_politics
+2024-10-15 17:56:43,296 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/abstract_algebra
+2024-10-15 17:56:43,297 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/clinical_knowledge
+2024-10-15 17:56:43,297 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_mathematics
+2024-10-15 17:56:43,297 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/business_ethics
+2024-10-15 17:56:43,298 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/anatomy
+2024-10-15 17:56:43,298 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/electrical_engineering
+2024-10-15 17:56:43,298 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/elementary_mathematics
+2024-10-15 17:56:43,299 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_european_history
+2024-10-15 17:56:43,299 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/human_sexuality
+2024-10-15 17:56:43,299 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/formal_logic
+2024-10-15 17:56:43,299 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_biology
+2024-10-15 17:56:43,300 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_physics
+2024-10-15 17:56:43,300 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/global_facts
+2024-10-15 17:56:43,300 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_biology
+2024-10-15 17:56:43,301 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_psychology
+2024-10-15 17:56:43,301 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_geography
+2024-10-15 17:56:43,301 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_world_history
+2024-10-15 17:56:43,302 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_statistics
+2024-10-15 17:56:43,302 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/econometrics
+2024-10-15 17:56:43,302 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_computer_science
+2024-10-15 17:56:43,302 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/high_school_chemistry
+2024-10-15 17:56:43,303 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/astronomy
+2024-10-15 17:56:43,303 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_medicine
+2024-10-15 17:56:43,303 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/college_chemistry
+2024-10-15 17:56:43,304 - INFO - 加载数据集子主题: ../datasets/mmlu_test_tts/conceptual_physics
+2024-10-15 17:56:43,305 - INFO - Processing subject: high_school_macroeconomics
+2024-10-15 17:56:53,393 - INFO - Processing subject: human_aging
+2024-10-15 17:57:06,883 - INFO - Processing subject: high_school_microeconomics
+2024-10-15 17:57:53,494 - INFO - Processing subject: high_school_physics
+2024-10-15 17:58:05,110 - INFO - Processing subject: high_school_computer_science
+2024-10-15 17:58:10,640 - INFO - Processing subject: computer_security
+2024-10-15 17:59:46,600 - INFO - Processing subject: college_mathematics
+2024-10-15 17:59:54,004 - INFO - Processing subject: high_school_us_history
+2024-10-15 18:00:15,417 - INFO - Processing subject: high_school_government_and_politics
+2024-10-15 18:00:26,000 - INFO - Processing subject: abstract_algebra
+2024-10-15 18:02:54,779 - INFO - Processing subject: clinical_knowledge
+2024-10-15 18:03:05,112 - INFO - Processing subject: high_school_mathematics
+2024-10-15 18:03:55,351 - INFO - Processing subject: business_ethics
+2024-10-15 18:04:06,170 - INFO - Processing subject: anatomy
+2024-10-15 18:04:21,631 - INFO - Processing subject: electrical_engineering
+2024-10-15 18:04:31,458 - INFO - Processing subject: elementary_mathematics
+2024-10-15 18:05:45,884 - INFO - Processing subject: high_school_european_history
+2024-10-15 18:06:06,737 - INFO - Processing subject: human_sexuality
+2024-10-15 18:06:17,989 - INFO - Processing subject: formal_logic
+2024-10-15 18:06:29,448 - INFO - Processing subject: college_biology
+2024-10-15 18:06:41,427 - INFO - Processing subject: college_physics
+2024-10-15 18:07:15,221 - INFO - Processing subject: global_facts
+2024-10-15 18:07:48,830 - INFO - Processing subject: high_school_biology
+2024-10-15 18:08:27,307 - INFO - Processing subject: high_school_psychology
+2024-10-15 18:08:37,869 - INFO - Processing subject: high_school_geography
+2024-10-15 18:09:08,947 - INFO - Processing subject: high_school_world_history
+2024-10-15 18:09:36,059 - INFO - Processing subject: high_school_statistics
+2024-10-15 18:09:57,851 - INFO - Processing subject: econometrics
+2024-10-15 18:10:35,989 - INFO - Processing subject: college_computer_science
+2024-10-15 18:10:54,054 - INFO - Processing subject: high_school_chemistry
+2024-10-15 18:11:02,386 - INFO - Processing subject: astronomy
+2024-10-15 18:11:27,226 - INFO - Processing subject: college_medicine
+2024-10-15 18:11:45,064 - INFO - Processing subject: college_chemistry
+2024-10-15 18:12:32,875 - INFO - Processing subject: conceptual_physics
+2024-10-15 18:13:38,357 - INFO - Overall Accuracy: 0.00%
+2024-10-15 18:13:38,357 - INFO - high_school_macroeconomics Accuracy: 0.00%
+2024-10-15 18:13:38,357 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,357 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,357 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO - human_aging Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO - high_school_microeconomics Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,358 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO - high_school_physics Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO - high_school_computer_science Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO - computer_security Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,359 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO - college_mathematics Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO - high_school_us_history Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO - high_school_government_and_politics Accuracy: 0.00%
+2024-10-15 18:13:38,360 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO - abstract_algebra Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO - clinical_knowledge Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,361 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO - high_school_mathematics Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO - business_ethics Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO - anatomy Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,362 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO - electrical_engineering Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO - elementary_mathematics Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO - high_school_european_history Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,363 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO - human_sexuality Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO - formal_logic Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO - college_biology Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,364 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO - college_physics Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO - global_facts Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO - high_school_biology Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,365 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO - high_school_psychology Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO - high_school_geography Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO - high_school_world_history Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,366 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO - high_school_statistics Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO - econometrics Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO - college_computer_science Accuracy: 0.00%
+2024-10-15 18:13:38,367 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO - high_school_chemistry Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO - astronomy Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,368 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO - college_medicine Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO - college_chemistry Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO - conceptual_physics Accuracy: 0.00%
+2024-10-15 18:13:38,369 - INFO -   echo Accuracy: 0.00%
+2024-10-15 18:13:38,370 - INFO -   nova Accuracy: 0.00%
+2024-10-15 18:13:38,370 - INFO -   fable Accuracy: 0.00%
+2024-10-15 18:13:38,370 - INFO -   onyx Accuracy: 0.00%
+2024-10-15 18:13:38,370 - INFO -   alloy Accuracy: 0.00%
+2024-10-15 18:13:38,370 - INFO -   shimmer Accuracy: 0.00%
+2024-10-15 18:13:38,370 - INFO - Average processing time per question: 4.6991 seconds

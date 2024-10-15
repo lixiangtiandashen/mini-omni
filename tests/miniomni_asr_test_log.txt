@@ -1,0 +1,220 @@
+2024-10-13 22:47:30,263 - INFO - Testing Omni model on LibriSpeech
+2024-10-13 22:47:31,972 - INFO - Sample 1:
+2024-10-13 22:47:31,972 - INFO - Reference: HE HOPED THERE WOULD BE STEW FOR DINNER TURNIPS AND CARROTS AND BRUISED POTATOES AND FAT MUTTON PIECES TO BE LADLED OUT IN THICK PEPPERED FLOUR FATTENED SAUCE
+2024-10-13 22:47:31,972 - INFO - Hypothesis: he hoped there would be stew for dinner turnips and carrots and bruised potatoes and fat mutton pieces to be ladled out in thick peppered flour-fat and sauce
+2024-10-13 22:47:31,973 - INFO - ---
+2024-10-13 22:47:32,913 - WARNING - High error rate detected for sample 2:
+2024-10-13 22:47:32,913 - WARNING - Original Reference: IT WAS IDLE FOR HIM TO MOVE HIMSELF TO BE GENEROUS TOWARDS THEM TO TELL HIMSELF THAT IF HE EVER CAME TO THEIR GATES STRIPPED OF HIS PRIDE BEATEN AND IN BEGGAR'S WEEDS THAT THEY WOULD BE GENEROUS TOWARDS HIM LOVING HIM AS THEMSELVES
+2024-10-13 22:47:32,913 - WARNING - Original Hypothesis: it was idle for him to move himself to be generous towards him loving him as themselves
+2024-10-13 22:47:32,913 - WARNING - Transformed Reference: it was idle for him to move himself to be generous towards them to tell himself that if he ever came to their gates stripped of his pride beaten and in beggars weeds that they would be generous towards him loving him as themselves
+2024-10-13 22:47:32,913 - WARNING - Transformed Hypothesis: it was idle for him to move himself to be generous towards him loving him as themselves
+2024-10-13 22:47:32,913 - WARNING - Sample WER: 0.61
+2024-10-13 22:47:32,913 - WARNING - ---
+2024-10-13 22:47:32,914 - INFO - Sample 2:
+2024-10-13 22:47:32,914 - INFO - Reference: IT WAS IDLE FOR HIM TO MOVE HIMSELF TO BE GENEROUS TOWARDS THEM TO TELL HIMSELF THAT IF HE EVER CAME TO THEIR GATES STRIPPED OF HIS PRIDE BEATEN AND IN BEGGAR'S WEEDS THAT THEY WOULD BE GENEROUS TOWARDS HIM LOVING HIM AS THEMSELVES
+2024-10-13 22:47:32,914 - INFO - Hypothesis: it was idle for him to move himself to be generous towards him loving him as themselves
+2024-10-13 22:47:32,914 - INFO - ---
+2024-10-13 22:47:33,814 - INFO - Sample 3:
+2024-10-13 22:47:33,814 - INFO - Reference: IN BOTH THESE HIGH MYTHICAL SUBJECTS THE SURROUNDING NATURE THOUGH SUFFERING IS STILL DIGNIFIED AND BEAUTIFUL
+2024-10-13 22:47:33,814 - INFO - Hypothesis: in both these high mythical subjects the surrounding nature though suffering is still dignified and beautiful
+2024-10-13 22:47:33,814 - INFO - ---
+2024-10-13 22:47:34,453 - INFO - Sample 4:
+2024-10-13 22:47:34,453 - INFO - Reference: PROBABLY NOT TILL THE SECOND POST
+2024-10-13 22:47:34,454 - INFO - Hypothesis: Probably not till the second post.
+2024-10-13 22:47:34,454 - INFO - ---
+2024-10-13 22:47:35,721 - INFO - Sample 5:
+2024-10-13 22:47:35,721 - INFO - Reference: LIFTING THE IRON HAMMER THAT HUNG AT THE PORTAL HESTER PRYNNE GAVE A SUMMONS WHICH WAS ANSWERED BY ONE OF THE GOVERNOR'S BOND SERVANT A FREE BORN ENGLISHMAN BUT NOW A SEVEN YEARS SLAVE
+2024-10-13 22:47:35,721 - INFO - Hypothesis: lifting the iron hammer that hung at the portal hester prin gave a summons which was answered by one of the governor's bond servants a free-born englishman but now a seven years slave
+2024-10-13 22:47:35,721 - INFO - ---
+2024-10-13 22:47:49,174 - WARNING - High error rate detected for sample 6:
+2024-10-13 22:47:49,174 - WARNING - Original Reference: NO I FORGOT ALL ABOUT THE BRAINS EXCLAIMED THE WOMAN
+2024-10-13 22:47:49,174 - WARNING - Original Hypothesis: No, I forgot all about the brains, exclaimed the woman. "I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry, but I've forgotten the brains. I'm sorry
+2024-10-13 22:47:49,174 - WARNING - Transformed Reference: no i forgot all about the brains exclaimed the woman
+2024-10-13 22:47:49,174 - WARNING - Transformed Hypothesis: no i forgot all about the brains exclaimed the woman im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry but ive forgotten the brains im sorry
+2024-10-13 22:47:49,174 - WARNING - Sample WER: 33.80
+2024-10-13 22:47:49,174 - WARNING - ---
+2024-10-13 22:48:03,442 - WARNING - High error rate detected for sample 8:
+2024-10-13 22:48:03,443 - WARNING - Original Reference: I WAS IN SUCH A HURRY TO COME TO YOU YOU LEFT YOUR DOOR OPEN
+2024-10-13 22:48:03,443 - WARNING - Original Hypothesis: I was in such a hurry to come to you. You left your door open. I left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open. You left your door open.
+2024-10-13 22:48:03,443 - WARNING - Transformed Reference: i was in such a hurry to come to you you left your door open
+2024-10-13 22:48:03,443 - WARNING - Transformed Hypothesis: i was in such a hurry to come to you you left your door open i left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open you left your door open
+2024-10-13 22:48:03,443 - WARNING - Sample WER: 29.33
+2024-10-13 22:48:03,443 - WARNING - ---
+2024-10-13 22:48:04,132 - WARNING - High error rate detected for sample 9:
+2024-10-13 22:48:04,132 - WARNING - Original Reference: THE FOUL MOUTHED FELLOW AT THE TOP
+2024-10-13 22:48:04,132 - WARNING - Original Hypothesis: the foul-mouthed fellow at the top
+2024-10-13 22:48:04,132 - WARNING - Transformed Reference: the foul mouthed fellow at the top
+2024-10-13 22:48:04,132 - WARNING - Transformed Hypothesis: the foulmouthed fellow at the top
+2024-10-13 22:48:04,132 - WARNING - Sample WER: 0.29
+2024-10-13 22:48:04,132 - WARNING - ---
+2024-10-13 22:48:09,915 - WARNING - High error rate detected for sample 14:
+2024-10-13 22:48:09,915 - WARNING - Original Reference: I NEVER SEE LOU'S SCYTHE OVER HERE
+2024-10-13 22:48:09,916 - WARNING - Original Hypothesis: I never see lose sighed over here.
+2024-10-13 22:48:09,916 - WARNING - Transformed Reference: i never see lous scythe over here
+2024-10-13 22:48:09,916 - WARNING - Transformed Hypothesis: i never see lose sighed over here
+2024-10-13 22:48:09,916 - WARNING - Sample WER: 0.29
+2024-10-13 22:48:09,916 - WARNING - ---
+2024-10-13 22:48:12,101 - WARNING - High error rate detected for sample 16:
+2024-10-13 22:48:12,102 - WARNING - Original Reference: I REFER TO THE THERMOMETER IT INDICATES THE FIGURE IS OBLITERATED
+2024-10-13 22:48:12,102 - WARNING - Original Hypothesis: I refer to the thermometer, it indicates the figure is obliterated. The figure is obliterated.
+2024-10-13 22:48:12,102 - WARNING - Transformed Reference: i refer to the thermometer it indicates the figure is obliterated
+2024-10-13 22:48:12,102 - WARNING - Transformed Hypothesis: i refer to the thermometer it indicates the figure is obliterated the figure is obliterated
+2024-10-13 22:48:12,102 - WARNING - Sample WER: 0.36
+2024-10-13 22:48:12,102 - WARNING - ---
+2024-10-13 22:48:12,773 - WARNING - High error rate detected for sample 17:
+2024-10-13 22:48:12,773 - WARNING - Original Reference: PAUL CAME LATER AND IS BENEATH US
+2024-10-13 22:48:12,773 - WARNING - Original Hypothesis: Paul came later in his beneath us.
+2024-10-13 22:48:12,773 - WARNING - Transformed Reference: paul came later and is beneath us
+2024-10-13 22:48:12,774 - WARNING - Transformed Hypothesis: paul came later in his beneath us
+2024-10-13 22:48:12,774 - WARNING - Sample WER: 0.29
+2024-10-13 22:48:12,774 - WARNING - ---
+2024-10-13 22:48:27,146 - WARNING - High error rate detected for sample 19:
+2024-10-13 22:48:27,146 - WARNING - Original Reference: I WILL IF TIMAEUS APPROVES I APPROVE
+2024-10-13 22:48:27,146 - WARNING - Original Hypothesis: I will, if to me as a proof, I approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve. I will, however, approve.
+2024-10-13 22:48:27,146 - WARNING - Transformed Reference: i will if timaeus approves i approve
+2024-10-13 22:48:27,146 - WARNING - Transformed Hypothesis: i will if to me as a proof i approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve i will however approve
+2024-10-13 22:48:27,146 - WARNING - Sample WER: 44.14
+2024-10-13 22:48:27,146 - WARNING - ---
+2024-10-13 22:48:31,947 - WARNING - High error rate detected for sample 23:
+2024-10-13 22:48:31,947 - WARNING - Original Reference: ALREADY A NORTH AND A SOUTH WERE TALKED OF WHY NOT SET UP ALSO A WEST
+2024-10-13 22:48:31,947 - WARNING - Original Hypothesis: Already in the south were talked of, why not set up also west?
+2024-10-13 22:48:31,947 - WARNING - Transformed Reference: already a north and a south were talked of why not set up also a west
+2024-10-13 22:48:31,947 - WARNING - Transformed Hypothesis: already in the south were talked of why not set up also west
+2024-10-13 22:48:31,947 - WARNING - Sample WER: 0.31
+2024-10-13 22:48:31,947 - WARNING - ---
+2024-10-13 22:48:55,040 - WARNING - High error rate detected for sample 34:
+2024-10-13 22:48:55,041 - WARNING - Original Reference: I BOLDLY LIGHTED MY CHEROOT
+2024-10-13 22:48:55,041 - WARNING - Original Hypothesis: I boldly lighted my char root.
+2024-10-13 22:48:55,041 - WARNING - Transformed Reference: i boldly lighted my cheroot
+2024-10-13 22:48:55,041 - WARNING - Transformed Hypothesis: i boldly lighted my char root
+2024-10-13 22:48:55,041 - WARNING - Sample WER: 0.40
+2024-10-13 22:48:55,041 - WARNING - ---
+2024-10-13 22:49:09,493 - WARNING - High error rate detected for sample 48:
+2024-10-13 22:49:09,493 - WARNING - Original Reference: WE ARE OF COURSE IN FACT ABLE TO JUDGE WHEN WE RECOGNIZE AN OBJECT THAT WE HAVE SEEN IT BEFORE BUT THIS JUDGMENT IS SOMETHING OVER AND ABOVE RECOGNITION IN THIS FIRST SENSE AND MAY VERY PROBABLY BE IMPOSSIBLE TO ANIMALS THAT NEVERTHELESS HAVE THE EXPERIENCE OF RECOGNITION IN THIS FIRST SENSE OF THE WORD
+2024-10-13 22:49:09,493 - WARNING - Original Hypothesis: we are of course able to judge when we recognize an object that we have seen it before but this judgment is something over and above recognition in this first sense of the word
+2024-10-13 22:49:09,493 - WARNING - Transformed Reference: we are of course in fact able to judge when we recognize an object that we have seen it before but this judgment is something over and above recognition in this first sense and may very probably be impossible to animals that nevertheless have the experience of recognition in this first sense of the word
+2024-10-13 22:49:09,493 - WARNING - Transformed Hypothesis: we are of course able to judge when we recognize an object that we have seen it before but this judgment is something over and above recognition in this first sense of the word
+2024-10-13 22:49:09,493 - WARNING - Sample WER: 0.38
+2024-10-13 22:49:09,493 - WARNING - ---
+2024-10-13 22:49:15,134 - WARNING - High error rate detected for sample 52:
+2024-10-13 22:49:15,134 - WARNING - Original Reference: IN A SUNSET GLOWING OF CRIMSON AND GOLD SHE LIES THE GLORY OF THE WORLD A BEACHED KING'S GALLEY WHOSE SAILS ARE FURLED WHO IS HUNG WITH TAPESTRIES RICH AND OLD
+2024-10-13 22:49:15,134 - WARNING - Original Hypothesis: in a sunset glowing of crimson and gold she lies the glory of the world a beached king's galley whose sails are furrowed who is hung with tapestries rich and old a beached king's galley whose sails are furrowed who is hung with tapestries rich and old
+2024-10-13 22:49:15,134 - WARNING - Transformed Reference: in a sunset glowing of crimson and gold she lies the glory of the world a beached kings galley whose sails are furled who is hung with tapestries rich and old
+2024-10-13 22:49:15,134 - WARNING - Transformed Hypothesis: in a sunset glowing of crimson and gold she lies the glory of the world a beached kings galley whose sails are furrowed who is hung with tapestries rich and old a beached kings galley whose sails are furrowed who is hung with tapestries rich and old
+2024-10-13 22:49:15,134 - WARNING - Sample WER: 0.55
+2024-10-13 22:49:15,134 - WARNING - ---
+2024-10-13 22:49:15,988 - INFO - LibriSpeechDataset Results:
+2024-10-13 22:49:15,989 - INFO - WER: 118.94%
+2024-10-13 22:49:15,989 - INFO - CER: 115.22%
+2024-10-13 22:49:15,989 - INFO - BLEU: 0.4086
+2024-10-13 22:49:15,989 - INFO - Total samples: 53
+2024-10-13 22:49:15,989 - INFO - Processed samples: 53
+2024-10-13 22:49:15,989 - INFO - Processing speed: 0.50 samples/second
+2024-10-13 22:49:15,989 - INFO - Average reference length: 18.92 words
+2024-10-13 22:49:15,989 - INFO - Average hypothesis length: 48.92 words
+2024-10-13 22:49:15,989 - INFO - ===============================================================
+2024-10-13 22:49:15,989 - INFO - Testing Omni model on Fleurs
+2024-10-13 22:49:17,003 - WARNING - High error rate detected for sample 1:
+2024-10-13 22:49:17,004 - WARNING - Original Reference: unfortunately studying traffic flow is difficult because driver behavior cannot be predicted with one-hundred percent certainty
+2024-10-13 22:49:17,004 - WARNING - Original Hypothesis: unfortunately stunning traffic flow is difficult because driver behavior cannot be predicted with one hundred per cent circumty
+2024-10-13 22:49:17,004 - WARNING - Transformed Reference: unfortunately studying traffic flow is difficult because driver behavior cannot be predicted with onehundred percent certainty
+2024-10-13 22:49:17,004 - WARNING - Transformed Hypothesis: unfortunately stunning traffic flow is difficult because driver behavior cannot be predicted with one hundred per cent circumty
+2024-10-13 22:49:17,004 - WARNING - Sample WER: 0.38
+2024-10-13 22:49:17,004 - WARNING - ---
+2024-10-13 22:49:17,004 - INFO - Sample 1:
+2024-10-13 22:49:17,004 - INFO - Reference: unfortunately studying traffic flow is difficult because driver behavior cannot be predicted with one-hundred percent certainty
+2024-10-13 22:49:17,004 - INFO - Hypothesis: unfortunately stunning traffic flow is difficult because driver behavior cannot be predicted with one hundred per cent circumty
+2024-10-13 22:49:17,004 - INFO - ---
+2024-10-13 22:49:18,570 - WARNING - High error rate detected for sample 2:
+2024-10-13 22:49:18,571 - WARNING - Original Reference: dr malar balasubramanian 29 was found in blue ash ohio a suburb approximately 15 miles north of cincinnati lying on the ground beside the road in a t-shirt and underwear in an apparently heavily medicated state
+2024-10-13 22:49:18,571 - WARNING - Original Hypothesis: dr mala bala sub manian twenty nine was found in blue ash ohio a suburb approximately fifteen miles north of cincinnati lying on the ground in a t-shirt and underwear in an apparently heavily medicated state
+2024-10-13 22:49:18,571 - WARNING - Transformed Reference: dr malar balasubramanian 29 was found in blue ash ohio a suburb approximately 15 miles north of cincinnati lying on the ground beside the road in a tshirt and underwear in an apparently heavily medicated state
+2024-10-13 22:49:18,571 - WARNING - Transformed Hypothesis: dr mala bala sub manian twenty nine was found in blue ash ohio a suburb approximately fifteen miles north of cincinnati lying on the ground in a tshirt and underwear in an apparently heavily medicated state
+2024-10-13 22:49:18,571 - WARNING - Sample WER: 0.28
+2024-10-13 22:49:18,571 - WARNING - ---
+2024-10-13 22:49:18,571 - INFO - Sample 2:
+2024-10-13 22:49:18,571 - INFO - Reference: dr malar balasubramanian 29 was found in blue ash ohio a suburb approximately 15 miles north of cincinnati lying on the ground beside the road in a t-shirt and underwear in an apparently heavily medicated state
+2024-10-13 22:49:18,571 - INFO - Hypothesis: dr mala bala sub manian twenty nine was found in blue ash ohio a suburb approximately fifteen miles north of cincinnati lying on the ground in a t-shirt and underwear in an apparently heavily medicated state
+2024-10-13 22:49:18,571 - INFO - ---
+2024-10-13 22:49:19,714 - INFO - Sample 3:
+2024-10-13 22:49:19,714 - INFO - Reference: goats seem to have been first domesticated roughly 10,000 years ago in the zagros mountains of iran
+2024-10-13 22:49:19,714 - INFO - Hypothesis: goats seem to have been first domesticated roughly ten thousand years ago in the zagros mountains of irene
+2024-10-13 22:49:19,714 - INFO - ---
+2024-10-13 22:49:21,038 - INFO - Sample 4:
+2024-10-13 22:49:21,038 - INFO - Reference: the 25 dunlap broadsides still known to exist are the oldest surviving copies of the document the original handwritten copy has not survived
+2024-10-13 22:49:21,038 - INFO - Hypothesis: the twenty-five dumb let broadside still known to exist are the oldest surviving copies of the document the original hand-written copy has not survived
+2024-10-13 22:49:21,039 - INFO - ---
+2024-10-13 22:49:22,044 - INFO - Sample 5:
+2024-10-13 22:49:22,045 - INFO - Reference: elements like calcium and potassium are considered metals of course there are also metals like silver and gold
+2024-10-13 22:49:22,045 - INFO - Hypothesis: elements like calcium and potassium are considered metals of course there are also metals like silver and gold.
+2024-10-13 22:49:22,045 - INFO - ---
+2024-10-13 22:49:23,757 - WARNING - High error rate detected for sample 7:
+2024-10-13 22:49:23,757 - WARNING - Original Reference: aristotle a philosopher theorised that everything is made up of a mixture of one or more of four elements they were earth water air and fire
+2024-10-13 22:49:23,757 - WARNING - Original Hypothesis: earth's water air and fire
+2024-10-13 22:49:23,757 - WARNING - Transformed Reference: aristotle a philosopher theorised that everything is made up of a mixture of one or more of four elements they were earth water air and fire
+2024-10-13 22:49:23,757 - WARNING - Transformed Hypothesis: earths water air and fire
+2024-10-13 22:49:23,757 - WARNING - Sample WER: 0.85
+2024-10-13 22:49:23,757 - WARNING - ---
+2024-10-13 22:49:23,761 - INFO - FleursDataset Results:
+2024-10-13 22:49:23,761 - INFO - WER: 30.97%
+2024-10-13 22:49:23,761 - INFO - CER: 22.32%
+2024-10-13 22:49:23,761 - INFO - BLEU: 0.6529
+2024-10-13 22:49:23,761 - INFO - Total samples: 7
+2024-10-13 22:49:23,761 - INFO - Processed samples: 7
+2024-10-13 22:49:23,761 - INFO - Processing speed: 0.90 samples/second
+2024-10-13 22:49:23,761 - INFO - Average reference length: 22.14 words
+2024-10-13 22:49:23,762 - INFO - Average hypothesis length: 19.86 words
+2024-10-13 22:49:23,762 - INFO - ===============================================================
+2024-10-13 22:49:23,762 - INFO - Testing Omni model on Custom
+2024-10-13 22:49:24,384 - INFO - Sample 1:
+2024-10-13 22:49:24,384 - INFO - Reference: What is your name?
+2024-10-13 22:49:24,384 - INFO - Hypothesis: What is your name?
+2024-10-13 22:49:24,384 - INFO - ---
+2024-10-13 22:49:25,016 - INFO - Sample 2:
+2024-10-13 22:49:25,016 - INFO - Reference: what are your hobbies?
+2024-10-13 22:49:25,016 - INFO - Hypothesis: What are your hobbies?
+2024-10-13 22:49:25,016 - INFO - ---
+2024-10-13 22:49:25,641 - INFO - Sample 3:
+2024-10-13 22:49:25,641 - INFO - Reference: Do you like beijing
+2024-10-13 22:49:25,641 - INFO - Hypothesis: Do you like Beijing?
+2024-10-13 22:49:25,641 - INFO - ---
+2024-10-13 22:49:26,301 - INFO - Sample 4:
+2024-10-13 22:49:26,301 - INFO - Reference: How are you feeling today?
+2024-10-13 22:49:26,301 - INFO - Hypothesis: How are you feeling today?
+2024-10-13 22:49:26,301 - INFO - ---
+2024-10-13 22:49:26,994 - INFO - Sample 5:
+2024-10-13 22:49:26,994 - INFO - Reference: what is the weather like today?
+2024-10-13 22:49:26,994 - INFO - Hypothesis: What is the weather like today?
+2024-10-13 22:49:26,995 - INFO - ---
+2024-10-13 22:49:26,997 - INFO - CustomDataset Results:
+2024-10-13 22:49:26,997 - INFO - WER: 0.00%
+2024-10-13 22:49:26,997 - INFO - CER: 0.00%
+2024-10-13 22:49:26,997 - INFO - BLEU: 1.0000
+2024-10-13 22:49:26,997 - INFO - Total samples: 5
+2024-10-13 22:49:26,997 - INFO - Processed samples: 5
+2024-10-13 22:49:26,997 - INFO - Processing speed: 1.55 samples/second
+2024-10-13 22:49:26,997 - INFO - Average reference length: 4.60 words
+2024-10-13 22:49:26,997 - INFO - Average hypothesis length: 4.60 words
+2024-10-13 22:49:26,997 - INFO - ===============================================================
+2024-10-13 22:49:27,022 - INFO - =============== TEST SUMMARY ===============
+2024-10-13 22:49:27,022 - INFO - 
+Results for omni_LibriSpeech:
+2024-10-13 22:49:27,023 - INFO - WER: 118.94%
+2024-10-13 22:49:27,023 - INFO - CER: 115.22%
+2024-10-13 22:49:27,023 - INFO - BLEU: 0.4086
+2024-10-13 22:49:27,023 - INFO - 
+Results for omni_Fleurs:
+2024-10-13 22:49:27,023 - INFO - WER: 30.97%
+2024-10-13 22:49:27,023 - INFO - CER: 22.32%
+2024-10-13 22:49:27,023 - INFO - BLEU: 0.6529
+2024-10-13 22:49:27,023 - INFO - 
+Results for omni_Custom:
+2024-10-13 22:49:27,023 - INFO - WER: 0.00%
+2024-10-13 22:49:27,023 - INFO - CER: 0.00%
+2024-10-13 22:49:27,023 - INFO - BLEU: 1.0000
+2024-10-13 22:49:27,023 - INFO - 
+Overall Average Results:
+2024-10-13 22:49:27,023 - INFO - Average WER: 49.97%
+2024-10-13 22:49:27,023 - INFO - Average CER: 45.85%
+2024-10-13 22:49:27,023 - INFO - Average BLEU: 0.6872
+2024-10-13 22:49:27,023 - INFO - ====================================================

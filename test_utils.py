@@ -42,6 +42,7 @@ FLEURS_TO_WHISPER_LANG = {
 
 
 def configure_logger(name, log_file):
+    print(f"配置日志: {log_file}")
     os.makedirs(os.path.dirname(log_file), exist_ok=True)
     logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)

@@ -9,7 +9,7 @@ import lightning as L
 from litgpt.generate.base import generate_ASR
 
 # 配置日志
-logger = configure_logger(__name__, os.path.join(BASE_DIR, "tests", "mini_omni_test_log.txt"))
+logger = configure_logger(__name__, os.path.join(BASE_DIR, "tests", "miniomni_asr_test_log.txt"))
 
 # 定义常量
 _eot = 151936
