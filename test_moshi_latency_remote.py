@@ -32,9 +32,8 @@ async def run_benchmark(uri, steps):
                 opus_data = opus_writer.read_bytes()
                 if opus_data:
                     await websocket.send(b"\x01" + opus_data)
-                await asyncio.sleep(0.02)  # 模拟实时音频流
+                # await asyncio.sleep(0.02)  # 模拟实时音频流
             send_complete.set()  # 标记发送完成
-            await websocket.send(b"\x03")  # 发送结束信号
 
         async def receive_response():
             nonlocal input_processing_time
@@ -64,8 +63,7 @@ async def run_benchmark(uri, steps):
                         if len(main_text) == 1:
                             # 新增:记录第一个token的时间作为输入处理时间
                             input_processing_time = current_time - start_time
-                    elif kind == 3:  # 结束信号
-                        break
+
                 except asyncio.TimeoutError:
                     if send_complete.is_set():
                         break  # 如果发送已完成且接收超时,则退出
