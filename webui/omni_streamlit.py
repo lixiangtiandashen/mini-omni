@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import streamlit as st
 import wave
 
@@ -7,7 +11,6 @@ import pyaudio
 import numpy as np
 import base64
 import io
-import os
 import time
 import tempfile
 import librosa

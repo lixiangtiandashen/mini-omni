@@ -11,7 +11,7 @@ import json
 import requests
 
 
-async def run_benchmark(uri, steps, audio_file):
+async def run_benchmark(uri, audio_file):
     # 读取完整的音频文件二进制内容
     with open(audio_file, "rb") as f:
         audio_data = f.read()
@@ -20,7 +20,7 @@ async def run_benchmark(uri, steps, audio_file):
     # 准备请求数据
     data = {
         "audio": audio_base64,
-        "stream_stride": 4,
+        "stream_stride": 4,  # 每次生成4个token
         "max_tokens": 2048
     }
 
@@ -43,8 +43,8 @@ async def run_benchmark(uri, steps, audio_file):
             total_audio_chunks += 1
             current_time = time.time()
 
-            # 假设每个音频chunk对应一个token
-            total_tokens += 1
+            # 每个音频chunk对应stream_stride个token
+            total_tokens += data["stream_stride"]
             token_time = current_time - last_token_time
             token_times.append(token_time)
             last_token_time = current_time
@@ -73,9 +73,6 @@ def main():
         help="URI of the Miniomni server",
     )
     parser.add_argument(
-        "--steps", type=int, default=100, help="Number of steps to run the benchmark"
-    )
-    parser.add_argument(
         "--audio_file",
         type=str,
         default="./data/samples/output1.wav",
@@ -83,7 +80,7 @@ def main():
     )
     args = parser.parse_args()
 
-    asyncio.run(run_benchmark(args.uri, args.steps, args.audio_file))
+    asyncio.run(run_benchmark(args.uri, args.audio_file))
 
 
 if __name__ == "__main__":
