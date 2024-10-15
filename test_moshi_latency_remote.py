@@ -88,7 +88,7 @@ async def run_benchmark(uri, steps):
             print(f"中间每token延迟: {avg_token_time:.4f} 秒")
             print(f"最小token延迟: {min(token_times):.4f} 秒")
             print(f"最大token延迟: {max(token_times):.4f} 秒")
-            print(f"吞吐量: {(total_tokens - 1) / generation_time:.2f} tokens/秒")
+            print(f"token生成速率: {1 / avg_token_time:.2f} tokens/秒")
         
         print("生成的文本:")
         print("".join(main_text))

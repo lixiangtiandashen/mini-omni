@@ -36,8 +36,9 @@ async def run_benchmark(uri, audio_file):
     total_audio_chunks = 0
     total_tokens = 0
     token_times = []
-    last_token_time = start_time
-    first_token_time = None
+    chunk_times = []
+    last_chunk_time = start_time
+    first_chunk_time = None
 
     for chunk in response.iter_content(chunk_size=None):
         if chunk:
@@ -47,30 +48,32 @@ async def run_benchmark(uri, audio_file):
             # 每个音频chunk对应stream_stride个token
             total_tokens += data["stream_stride"]
             
-            if first_token_time is None:
-                first_token_time = current_time
-                last_token_time = current_time
+            if first_chunk_time is None:
+                first_chunk_time = current_time
+                last_chunk_time = current_time
             else:
-                token_time = current_time - last_token_time
-                token_times.append(token_time)
-                last_token_time = current_time
+                chunk_time = current_time - last_chunk_time
+                chunk_times.append(chunk_time)
+                last_chunk_time = current_time
 
     end_time = time.time()
     total_time = end_time - start_time
-    generation_time = end_time - first_token_time
+    generation_time = end_time - first_chunk_time
 
     print(f"总运行时间: {total_time:.2f} 秒")
-    print(f"首token延迟: {first_token_time - start_time:.2f} 秒")
+    print(f"首音频块延迟: {first_chunk_time - start_time:.2f} 秒")
     print(f"总音频块数: {total_audio_chunks}")
     print(f"总生成token数: {total_tokens}")
 
-    if token_times:
-        avg_token_time = sum(token_times) / len(token_times)
-        print(f"中间每token延迟: {avg_token_time:.4f} 秒")
-        print(f"最小token延迟: {min(token_times):.4f} 秒")
-        print(f"最大token延迟: {max(token_times):.4f} 秒")
-        print(f"吞吐量: {(total_tokens - data['stream_stride']) / generation_time:.2f} tokens/秒")
-
+    if chunk_times:
+        avg_chunk_time = sum(chunk_times) / len(chunk_times)
+        avg_chunk_time_per_token = avg_chunk_time / data["stream_stride"]
+        print(f"中间每音频块延迟: {avg_chunk_time:.4f} 秒")
+        print(f"中间每token延迟: {avg_chunk_time_per_token:.4f} 秒")
+        print(f"最小音频块延迟: {min(chunk_times):.4f} 秒")
+        print(f"最大音频块延迟: {max(chunk_times):.4f} 秒")
+        print(f"音频块生成速率: {1 / avg_chunk_time:.2f} 音频块/秒")
+        print(f"token生成速率: {1 / avg_chunk_time_per_token:.2f} tokens/秒")
 
 def main():
     parser = argparse.ArgumentParser()
