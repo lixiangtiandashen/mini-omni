@@ -12,16 +12,17 @@ import requests
 
 
 async def run_benchmark(uri, steps, audio_file):
-    # 读取音频文件
-    audio, sample_rate = sf.read(audio_file)
-    audio = audio.astype(np.float32)
-
-    # 将音频数据编码为base64字符串
-    audio_bytes = audio.tobytes()
-    audio_base64 = base64.b64encode(audio_bytes).decode("utf-8")
+    # 读取完整的音频文件二进制内容
+    with open(audio_file, "rb") as f:
+        audio_data = f.read()
+    audio_base64 = base64.b64encode(audio_data).decode("utf-8")
 
     # 准备请求数据
-    data = {"audio": audio_base64, "stream_stride": 4, "max_tokens": 2048}
+    data = {
+        "audio": audio_base64,
+        "stream_stride": 4,
+        "max_tokens": 2048
+    }
 
     start_time = time.time()
 
